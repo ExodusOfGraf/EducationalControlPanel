@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Электронная успеваемость</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Электронная успеваемость</h1>
+
+        <div id="login-form">
+            <h2>Вход</h2>
+            <label for="username">Логин:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <button onclick="login()">Войти</button>
+        </div>
+
+        <div id="teacher-panel" class="hidden">
+            <h2>Панель преподавателя</h2>
+            <div id="students-table"></div>
+            <div id="student-grades-editor" class="hidden">
+                <h3>Редактирование оценок</h3>
+                <label for="session-select">Выберите сессию:</label>
+                <select id="session-select"></select>
+                <div id="session-grades"></div>
+                <div>
+                    <button onclick="saveSessionGrades()">Сохранить</button>
+                    <button id="add-subject-button" onclick="openAddSubjectDialog()">Добавить предмет</button>
+                    <button onclick="resetSessionGrades()">Сбросить сессию</button>
+                </div>
+                <div id="add-subject-dialog" class="hidden">
+                    <label for="new-subject-name">Название предмета:</label>
+                    <input type="text" id="new-subject-name">
+                    <div>
+                        <button onclick="confirmAddSubject()">OK</button>
+                        <button onclick="closeAddSubjectDialog()">Отмена</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="student-panel" class="hidden">
+            <h2>Панель студента</h2>
+            <div id="student-info"></div>
+            <div id="grades-view"></div>
+        </div>
+
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

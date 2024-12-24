@@ -1,0 +1,379 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f4f7f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 90%;
+  max-width: 900px;
+}
+
+h1, h2 {
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Стили для формы входа */
+#login-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 20px auto;
+}
+
+#login-form h2 {
+  margin-top: 0;
+}
+
+#login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+#login-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+#login-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Общие стили для панелей */
+#teacher-panel, #student-panel {
+  margin-top: 20px;
+}
+
+#teacher-panel h2, #student-panel h2 {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+/* Стили для кнопок */
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #1e7e34;
+}
+
+/* Стили для таблиц */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+.edit-cell input {
+  width: 60px;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Стили для редактора оценок */
+#student-grades-editor {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+#student-grades-editor h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#student-grades-editor label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#student-grades-editor select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+#student-grades-editor button {
+  margin-top: 10px;
+  margin-right: 0;
+}
+
+#session-grades {
+  margin-bottom: 20px;
+}
+
+.subject-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.delete-subject-button {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.delete-subject-button:hover {
+  color: #bd2130;
+}
+
+/* Стили для информации о студенте */
+#student-info {
+  background-color: #e8f0fe;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#student-info p {
+  margin: 5px 0;
+}
+
+#student-info strong {
+  font-weight: bold;
+}
+
+/* Стили для модального окна */
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#add-student-modal label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#add-student-modal input[type="text"],
+#add-student-modal input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+#add-student-modal button {
+  margin-top: 15px;
+  margin-right: 0;
+}
+
+#add-student-errors {
+  color: #dc3545;
+  margin-bottom: 10px;
+}
+
+#add-subject-dialog {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 11;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+#add-subject-dialog label {
+  display: block;
+  font-weight: bold;
+}
+
+#add-subject-dialog input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#add-subject-dialog button {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+#add-subject-dialog button:first-of-type {
+  background-color: #28a745;
+  color: white;
+}
+
+#add-subject-dialog button:last-of-type {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+#add-subject-dialog button {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+#add-subject-dialog button:first-of-type {
+  background-color: #28a745;
+  color: white;
+}
+
+#add-subject-dialog button:nth-of-type(2) {
+  background-color: #dc3545;
+  color: white; 
+  border: 1px solid #dc3545;
+}
+
+#add-subject-dialog div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#students-table table tr.student-row {
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#students-table table tr.student-row:hover {
+  background-color: #f0f8ff; /* Светлый цвет заливки при наведении */
+  transform: scale(1.05); /* Небольшое увеличение масштаба */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Небольшая тень для эффекта "поднятия" */
+  cursor: pointer; /* Изменение курсора на "указатель" */
+}
